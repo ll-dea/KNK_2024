@@ -1,19 +1,29 @@
 package Controller;
 
+import Main.Main;
 import database.DatabaseUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class loginController {
+
+    private Parent root;
+    private Stage stage;
+    private Scene scene;
 
     @FXML
     private TextField usernameTextField;
@@ -38,6 +48,18 @@ public class loginController {
             loginMessageLabel.setText("You need to enter your username and password!");
         }
     }
+    @FXML
+    private Button goToSignupButton;
+
+    public void goToSignupButtonAction(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/Signup.fxml"));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
 
     public void validatelogin(){
         DatabaseUtil connectNow = new DatabaseUtil();
