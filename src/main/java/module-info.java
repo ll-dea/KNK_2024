@@ -7,8 +7,11 @@ module org.example.knk_2024 {
 
     requires com.dlsc.formsfx;
 
-    opens org.example.knk_2024 to javafx.fxml;
-    exports org.example.knk_2024;
+    opens Controller to javafx.fxml;
+    exports Controller;
+    exports Main;
+    opens Main to javafx.fxml;
+
 }
 
 

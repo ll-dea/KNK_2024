@@ -81,7 +81,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>org.example.knk_2024/org.example.knk_2024.HelloApplication</mainClass>
+              <mainClass>org.example.knk_2024/Main.Main</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>
