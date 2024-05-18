@@ -48,7 +48,7 @@
                     </font>
                 </Button>
             <Button fx:id="closeButton" blendMode="DARKEN" layoutX="316.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="X" textFill="#861c15" />
-            <Label fx:id="loginMessageLabel" layoutX="22.0" layoutY="169.0" prefHeight="19.0" prefWidth="331.0" textAlignment="CENTER" textFill="#e94545">
+            <Label fx:id="loginMessageLabel" layoutX="99.0" layoutY="145.0" prefHeight="19.0" prefWidth="254.0" textAlignment="CENTER" textFill="#e94545">
                <font>
                   <Font size="13.0" />
                </font>
