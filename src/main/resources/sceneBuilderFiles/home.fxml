@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="700.0" style="-fx-background-color: #861c15;">
+         <children>
+            <Label layoutX="14.0" layoutY="17.0" text="KMS" textFill="#f2f3f8">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView layoutY="81.0" prefHeight="420.0" prefWidth="700.0" AnchorPane.bottomAnchor="-0.8000000000000114" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="81.0">
+        <columns>
+          <TableColumn prefWidth="116.6" text="Index" />
+          <TableColumn prefWidth="116.7" text="Lënda" />
+            <TableColumn prefWidth="116.6" text="Prof." />
+            <TableColumn prefWidth="116.6" text="Data" />
+            <TableColumn prefWidth="116.6" text="Ora" />
+            <TableColumn prefWidth="116.6" text="Salla" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

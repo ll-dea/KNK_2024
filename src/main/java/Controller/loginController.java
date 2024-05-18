@@ -59,7 +59,13 @@ public class loginController {
         stage.show();
     }
 
-
+    public void goToHomeButtonAction(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/home.fxml"));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     public void validatelogin(){
         DatabaseUtil connectNow = new DatabaseUtil();
@@ -72,7 +78,8 @@ public class loginController {
 
             while (queryResult.next()){
                 if (queryResult.getInt(1) == 1){
-                    loginMessageLabel.setText("Welcome");
+//                    loginMessageLabel.setText("Welcome");
+                   
 
                 }else{
                     loginMessageLabel.setText("Invalid login. Please try again!");
