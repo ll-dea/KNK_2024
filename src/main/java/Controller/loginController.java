@@ -1,3 +1,4 @@
+//
 //package Controller;
 //
 //import Main.Main;
@@ -38,16 +39,15 @@
 //        Stage stage = (Stage) closeButton.getScene().getWindow();
 //        stage.close();
 //    }
+//
 //    public void loginButtonAction(ActionEvent e) throws IOException {
-//
-//        if (usernameTextField.getText().isBlank() == false && passwordPasswordField.getText().isBlank() == false) {
-//            validatelogin();
-//
-//        }
-//        else{
+//        if (!usernameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
+//            validatelogin(e); // Pass the event to the validation method
+//        } else {
 //            loginMessageLabel.setText("You need to enter your username and password!");
 //        }
 //    }
+//
 //    @FXML
 //    private Button goToSignupButton;
 //
@@ -59,33 +59,32 @@
 //        stage.show();
 //    }
 //
-//
-//
-//    public void validatelogin(){
+//    public void validatelogin(ActionEvent e) {
 //        DatabaseUtil connectNow = new DatabaseUtil();
 //        Connection connectdb = connectNow.getconnection();
 //
-//        String verifyLogin = "SELECT count(1) from users where email = '"+usernameTextField.getText()+"' AND password = '"+passwordPasswordField.getText()+"'";
+//        String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + passwordPasswordField.getText() + "'";
 //        try {
 //            Statement statement = connectdb.createStatement();
 //            ResultSet queryResult = statement.executeQuery(verifyLogin);
 //
-//            while (queryResult.next()){
-//                if (queryResult.getInt(1) == 1){
-//
-//
-//                }else{
-//                    loginMessageLabel.setText("Invalid login. Please try again!");
-//
-//                }
+//            if (queryResult.next() && queryResult.getInt(1) == 1) {
+//                // Load the new FXML file and set the scene
+//                Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/home.fxml"));
+//                stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+//                scene = new Scene(root);
+//                stage.setScene(scene);
+//                stage.show();
+//            } else {
+//                loginMessageLabel.setText("Invalid login. Please try again!");
 //            }
-//        }catch(Exception e){
-//            e.printStackTrace();
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//            loginMessageLabel.setText("An error occurred. Please try again later.");
 //        }
-//
 //    }
-//
 //}
+
 
 package Controller;
 
@@ -147,6 +146,44 @@ public class loginController {
         stage.show();
     }
 
+//    public void validatelogin(ActionEvent e) {
+//        DatabaseUtil connectNow = new DatabaseUtil();
+//        Connection connectdb = connectNow.getconnection();
+//
+//        String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + passwordPasswordField.getText() + "'";
+//        try {
+//            Statement statement = connectdb.createStatement();
+//            ResultSet queryResult = statement.executeQuery(verifyLogin);
+//
+//            if (queryResult.next() && queryResult.getInt(1) == 1) {
+//                // Check the email domain
+//                String email = usernameTextField.getText();
+//                String fxmlFile = "";
+//                if (email.endsWith("@student.com")) {
+//                    fxmlFile = "/sceneBuilderFiles/home.fxml";
+//                } else if (email.endsWith("@professor.com")) {
+//                    fxmlFile = "/sceneBuilderFiles/profhome.fxml";
+//                }
+//
+//                // Load the appropriate FXML file and set the scene
+//                if (!fxmlFile.isEmpty()) {
+//                    Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
+//                    stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+//                    scene = new Scene(root);
+//                    stage.setScene(scene);
+//                    stage.show();
+//                } else {
+//                    loginMessageLabel.setText("Invalid email domain!");
+//                }
+//            } else {
+//                loginMessageLabel.setText("Invalid login. Please try again!");
+//            }
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//            loginMessageLabel.setText("An error occurred. Please try again later.");
+//        }
+//    }
+
     public void validatelogin(ActionEvent e) {
         DatabaseUtil connectNow = new DatabaseUtil();
         Connection connectdb = connectNow.getconnection();
@@ -157,12 +194,30 @@ public class loginController {
             ResultSet queryResult = statement.executeQuery(verifyLogin);
 
             if (queryResult.next() && queryResult.getInt(1) == 1) {
-                // Load the new FXML file and set the scene
-                Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/home.fxml"));
-                stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-                scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
+                // Check the email domain
+                String email = usernameTextField.getText();
+                String fxmlFile = "";
+                if (email.endsWith("@student.com")) {
+                    fxmlFile = "/sceneBuilderFiles/home.fxml";
+                } else if (email.endsWith("@professor.com")) {
+                    fxmlFile = "/sceneBuilderFiles/profhome.fxml";
+                }
+
+                // Load the appropriate FXML file and set the scene
+                if (!fxmlFile.isEmpty()) {
+                    try {
+                        Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
+                        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+                        scene = new Scene(root);
+                        stage.setScene(scene);
+                        stage.show();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                        loginMessageLabel.setText("Error loading the new scene.");
+                    }
+                } else {
+                    loginMessageLabel.setText("Invalid email domain!");
+                }
             } else {
                 loginMessageLabel.setText("Invalid login. Please try again!");
             }
@@ -171,4 +226,5 @@ public class loginController {
             loginMessageLabel.setText("An error occurred. Please try again later.");
         }
     }
+
 }

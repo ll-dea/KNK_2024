@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.DropdownButton?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuItem?>
@@ -24,13 +23,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <DropdownButton layoutX="97.0" layoutY="114.0">
-          <items>
-              <MenuItem text="Choice 1" />
-              <MenuItem text="Choice 2" />
-              <MenuItem text="Choice 3" />
-          </items>
-      </DropdownButton>
+
       <Label layoutX="33.0" layoutY="119.0" text="Lenda:" />
       <DatePicker layoutX="285.0" layoutY="115.0" />
       <Label layoutX="242.0" layoutY="119.0" text="Data:" />
