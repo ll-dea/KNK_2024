@@ -10,11 +10,9 @@ password VARCHAR(255)
 );
 
 INSERT INTO knk2024.users (id, first_name, last_name, email, password) VALUES
-(1, 'Dea', 'Llapatinca', 'student@example.com','1234'),
-(2, 'Blend', 'Arifaj', 'professor@example.com','5678'),
-(3, 'Blerta', 'Lutolli', 'student1@example.com','12345'),
-(4, 'Dea', 'Limoni', 'student2@example.com','12345'),
-(5, 'Dea', 'Llapatinca', 'student3@example.com','123456');
+(1, 'Dea', 'Llapatinca', 'example@student.com','1234'),
+(2, 'Blend', 'Arifaj', 'example@professor.com','5678'),
+
 
 
 SELECT * FROM knk2024.users;
