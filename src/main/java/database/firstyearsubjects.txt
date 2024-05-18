@@ -1,0 +1,21 @@
+CREATE TABLE knk2024.firstyearsubjects(
+LendaID INT PRIMARY KEY NOT NULL,
+Emri_i_lendes VARCHAR(255),
+Emri_i_profesorit VARCHAR(255),
+Data_e_konsultimeve DATE
+);
+
+INSERT INTO knk2024.firstyearsubjects (LendaID, Emri_i_lendes, Emri_i_profesorit, Data_e_konsultimeve) VALUES
+(1, 'Algjebra Lineare dhe Kalkulus 1', NULL, '2024-05-25'),
+(2, 'Fizika 1', NULL, '2024-05-26'),
+(3, 'Bazat e inxhinierise elektrike 1', NULL, '2024-05-27'),
+(4, 'Programim', NULL, '2024-05-30'),
+(5, 'Shkathtesi Komunikuese', NULL, '2024-05-28'),
+(6, 'Kalkulus 2', NULL, '2024-06-01'),
+(7, 'Fizika 2', NULL, '2024-05-25'),
+(8, 'Bazat e inxhinierise elektrike 2', NULL, '2024-06-02'),
+(9, 'Algoritmet dhe strukturat e te dhenave', NULL, '2024-05-27'),
+(10, 'Praktikum', NULL, '2024-05-27'),
+(11, 'Qarqe digjitale', NULL, '2024-05-03');
+
+SELECT * FROM knk2024.firstyearsubjects;
