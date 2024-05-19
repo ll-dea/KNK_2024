@@ -10,8 +10,14 @@ password VARCHAR(255)
 );
 
 INSERT INTO knk2024.users (id, first_name, last_name, email, password) VALUES
-(1, 'Dea', 'Llapatinca', 'example@student.com','1234'),
-(2, 'Blend', 'Arifaj', 'example@professor.com','5678'),
+(1, 'Dea', 'Llapatinca', 'dea.llapatinca@student.com','q1tefoM64LZTwy7CIq2hCHRyV6Np84z1Wg1KmAzSRTo='),
+(2, 'Dea', 'Limoni', 'dea.limoni@student.com','q1tefoM64LZTwy7CIq2hCHRyV6Np84z1Wg1KmAzSRTo='),
+(3, 'Elisa', 'Berisha', 'elisa.berisha@student.com','hLjqxGa05LbMKfFffMu/rxQ4+OZWkowvOpIzJQ+XOQw='),
+(4, 'Elisa', 'Gjurkaj', 'elisa.gjurkaj@student.com','hLjqxGa05LbMKfFffMu/rxQ4+OZWkowvOpIzJQ+XOQw='),
+(5, 'Blerta', 'Lutolli', 'blerta.lutolli@student.com','F8yfHDPpo201YnkzNQVa05++GvoqgpWjNwMfYZdTx0Q='),
+(6, 'Alfred', 'Palokaj', 'alfred.palokaj@student.com','YkyRfEdZjCKqUbUdodTGC6FpxU+MzBkmU72KI+t1fY4='),
+(7, 'Dion', 'Bogaj', 'dion.bogaj@student.com','upFoVk5b7+zZMuKXxgrCcdq23q82b+hfIjUqMtENzkE='),
+(8, 'Blend', 'Arifaj', 'blend.arifaj@professor.com','J73fiDyd5r5t3FGtx/ItrCjyGQnQtmIJ9VIbawRI4IE='),
 
 
 
