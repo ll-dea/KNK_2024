@@ -5,6 +5,7 @@ import database.DatabaseUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,14 +16,17 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Base64;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
-public class loginController {
+public class loginController  {
 
     private Parent root;
     private Stage stage;
@@ -120,4 +124,13 @@ public class loginController {
             return null;
         }
     }
+//
+//    @Override
+//    public void initialize(URL url, ResourceBundle resourceBundle) {
+//        Locale locale = Locale.getDefault();
+//        ResourceBundle bundle = ResourceBundle.getBundle(
+//                "translations", locale
+//        );
+//        this.goToSignupButton.setText(bundle.getString("lblCreateNewAccount"));
+//    }
 }

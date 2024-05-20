@@ -17,7 +17,7 @@ INSERT INTO knk2024.users (id, first_name, last_name, email, password) VALUES
 (5, 'Blerta', 'Lutolli', 'blerta.lutolli@student.com','F8yfHDPpo201YnkzNQVa05++GvoqgpWjNwMfYZdTx0Q='),
 (6, 'Alfred', 'Palokaj', 'alfred.palokaj@student.com','YkyRfEdZjCKqUbUdodTGC6FpxU+MzBkmU72KI+t1fY4='),
 (7, 'Dion', 'Bogaj', 'dion.bogaj@student.com','upFoVk5b7+zZMuKXxgrCcdq23q82b+hfIjUqMtENzkE='),
-(8, 'Blend', 'Arifaj', 'blend.arifaj@professor.com','J73fiDyd5r5t3FGtx/ItrCjyGQnQtmIJ9VIbawRI4IE='),
+(8, 'Blend', 'Arifaj', 'blend.arifaj@professor.com','J73fiDyd5r5t3FGtx/ItrCjyGQnQtmIJ9VIbawRI4IE=');
 
 
 
