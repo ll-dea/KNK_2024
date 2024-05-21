@@ -35,6 +35,12 @@ public class profHomeController {
     private TextField oraKonsulltimeve;
     @FXML
     private TextField sallaKonsulltiemve;
+    @FXML
+    private Button closeButton;
 
+    public void cancelButtonOnAction(ActionEvent e) {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
 
 }
