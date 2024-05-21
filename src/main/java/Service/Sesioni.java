@@ -18,4 +18,10 @@ public class Sesioni {
     public List<OrariKonsultimeve> getOraret() {
         return oraret;
     }
+    public void fshijOrar(OrariKonsultimeve orari) {
+        oraret.remove(orari);
+
+    }
+
+
 }

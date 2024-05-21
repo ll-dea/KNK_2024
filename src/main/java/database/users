@@ -10,7 +10,7 @@ password VARCHAR(255)
 );
 
 INSERT INTO knk2024.users (id, first_name, last_name, email, password) VALUES
-(1, 'Dea', 'Llapatinca', 'dea.llapatinca@student.com','q1tefoM64LZTwy7CIq2hCHRyV6Np84z1Wg1KmAzSRTo='),
+(1, 'Dea', 'Llapatinca', 'dea.llapatinca@student.com','dea.llapatinca@student.com'),
 (2, 'Dea', 'Limoni', 'dea.limoni@student.com','q1tefoM64LZTwy7CIq2hCHRyV6Np84z1Wg1KmAzSRTo='),
 (3, 'Elisa', 'Berisha', 'elisa.berisha@student.com','hLjqxGa05LbMKfFffMu/rxQ4+OZWkowvOpIzJQ+XOQw='),
 (4, 'Elisa', 'Gjurkaj', 'elisa.gjurkaj@student.com','hLjqxGa05LbMKfFffMu/rxQ4+OZWkowvOpIzJQ+XOQw='),

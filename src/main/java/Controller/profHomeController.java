@@ -66,6 +66,7 @@ public class profHomeController implements Initializable {
 
         OrariKonsultimeve orari = new OrariKonsultimeve(lenda, data, ora, salla);
         sesioni.shtoOrar(orari);
+        sesioni.fshijOrar(orari);
         clearFields();
         showAlert(Alert.AlertType.INFORMATION, "Sukses", "Orari u shtua me sukses!");
     }
