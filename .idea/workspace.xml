@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f851600-c191-43f3-9942-567de10b97ce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/commonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/OrariKonsultimeve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/Sesioni.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/common.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/translations/Messages_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/translations/Messages_sq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profhome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profhome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +51,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Merging master",
     "jdk.selected.JAVA_MODULE": "22",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/Admin/OneDrive/Desktop/KNK_2024/src/main/java/org/example/knk_2024",
     "last_opened_file_path": "C:/Users/Admin/OneDrive/Desktop/MYSQLJAVACONNECTOR/mysql-connector-java-8.0.25.jar",
-    "project.structure.last.edited": "Global Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.fileTypes"
@@ -58,6 +67,7 @@
       <recent name="org.example.knk_2024" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Test\Desktop\New folder\KNK_2024\src\main\resources\translations" />
       <recent name="C:\Users\Admin\OneDrive\Desktop\KNK_2024\src\main\java\org\example\knk_2024" />
       <recent name="C:\Users\Admin\OneDrive\Desktop\KNK_2024\src" />
     </key>
