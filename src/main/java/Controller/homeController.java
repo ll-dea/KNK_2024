@@ -8,8 +8,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+
+
+
 
 public class homeController {
 
@@ -17,11 +19,14 @@ public class homeController {
     private Stage stage;
     private Scene scene;
 
+
     @FXML
     private Button closeButton;
 
     @FXML
     private Button signoutButton;
+
+
 
     public void signoutButtonAction(ActionEvent e) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/login.fxml"));
@@ -35,4 +40,6 @@ public class homeController {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
+
+
 }

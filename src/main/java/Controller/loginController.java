@@ -26,6 +26,8 @@ import java.util.Base64;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+
+
 public class loginController  {
 
     private Parent root;
@@ -133,4 +135,20 @@ public class loginController  {
 //        );
 //        this.goToSignupButton.setText(bundle.getString("lblCreateNewAccount"));
 //    }
+
+    public static void updateTexts(ResourceBundle bundle) {
+        if (instance != null) {
+            instance.closeButton.setText(bundle.getString("button.close"));
+            instance.loginMessageLabel.setText(bundle.getString("label.loginMessage"));
+            instance.goToSignupButton.setText(bundle.getString("button.goToSignup"));
+        }
+    }
+
+    private static loginController instance;
+
+    @FXML
+    public void initialize() {
+        instance = this;
+    }
 }
+
