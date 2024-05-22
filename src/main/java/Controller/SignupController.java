@@ -63,7 +63,7 @@ public class SignupController {
 
     public void signupButtonAction(ActionEvent e) {
         if (!firstNameField.getText().isBlank() && !secondNameField.getText().isBlank() && !signupEmailField.getText().isBlank() && !signupPasswordField.getText().isBlank() && !repeatSignupPasswordField.getText().isBlank()) {
-            if (signupEmailField.getText().endsWith("@student.com")) {
+            if (signupEmailField.getText().endsWith("@student.uni-pr.edu")) {
                 if (signupPasswordField.getText().equals(repeatSignupPasswordField.getText())) {
                     checkEmailAndSaveCredentials();
                 } else {

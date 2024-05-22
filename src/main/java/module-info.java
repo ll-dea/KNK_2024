@@ -6,6 +6,7 @@ module org.example.knk_2024 {
 
 
     requires com.dlsc.formsfx;
+    requires mysql.connector.j;
 
     opens Controller to javafx.fxml;
     exports Controller;

@@ -22,3 +22,5 @@ INSERT INTO knk2024.users (id, first_name, last_name, email, password) VALUES
 
 
 SELECT * FROM knk2024.users;
+
+shtone edhe qet pjese: ALTER TABLE knk2024.users MODIFY COLUMN id INT AUTO_INCREMENT;
