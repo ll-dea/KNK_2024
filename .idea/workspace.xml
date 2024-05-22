@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f851600-c191-43f3-9942-567de10b97ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/commonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/OrariKonsultimeve.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/Sesioni.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/common.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translations/Messages_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translations/Messages_sq.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" afterDir="false" />
-    </list>
+    <list default="true" id="7f851600-c191-43f3-9942-567de10b97ce" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "22",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/Admin/OneDrive/Desktop/KNK_2024/src/main/java/org/example/knk_2024",
