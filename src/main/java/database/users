@@ -24,3 +24,13 @@ INSERT INTO knk2024.users (id, first_name, last_name, email, password) VALUES
 SELECT * FROM knk2024.users;
 
 shtone edhe qet pjese: ALTER TABLE knk2024.users MODIFY COLUMN id INT AUTO_INCREMENT;
+
+edhe:
+UPDATE `knk2024`.`users` SET `email` = 'dea.llapatinca@student.uni-pr.edu' WHERE (`id` = '1');
+UPDATE `knk2024`.`users` SET `email` = 'dea.limoni@student.uni-pr.edu' WHERE (`id` = '2');
+UPDATE `knk2024`.`users` SET `email` = 'elisa.berisha@student.uni-pr.edu' WHERE (`id` = '3');
+UPDATE `knk2024`.`users` SET `email` = 'elisa.gjurkaj@student.uni-pr.edu' WHERE (`id` = '4');
+UPDATE `knk2024`.`users` SET `email` = 'blerta.lutolli@student.uni-pr.edu' WHERE (`id` = '5');
+UPDATE `knk2024`.`users` SET `email` = 'alfred.palokaj@student.uni-pr.edu' WHERE (`id` = '6');
+UPDATE `knk2024`.`users` SET `email` = 'dion.bogaj@student.uni-pr.edu' WHERE (`id` = '7');
+UPDATE `knk2024`.`users` SET `email` = 'blend.arifaj@uni-pr.edu' WHERE (`id` = '8');
