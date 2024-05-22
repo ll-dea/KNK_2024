@@ -69,6 +69,7 @@ public class profHomeController implements Initializable {
         sesioni.fshijOrar(orari);
         clearFields();
         showAlert(Alert.AlertType.INFORMATION, "Sukses", "Orari u shtua me sukses!");
+        showAlert(Alert.AlertType.INFORMATION, "Sukses", "Orari u fshi me sukses!");
     }
 
     private void clearFields() {

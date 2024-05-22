@@ -3,6 +3,7 @@ package Controller;
 import Main.Main;
 import database.DatabaseUtil;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -28,7 +31,7 @@ import java.util.ResourceBundle;
 
 
 
-public class loginController  {
+public class loginController {
 
     private Parent root;
     private Stage stage;
@@ -43,7 +46,7 @@ public class loginController  {
     @FXML
     private Label loginMessageLabel;
 
-    public void cancelButtonOnAction(ActionEvent e){
+    public void cancelButtonOnAction(ActionEvent e) {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
@@ -61,7 +64,7 @@ public class loginController  {
 
     public void goToSignupButtonAction(ActionEvent e) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/Signup.fxml"));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -93,7 +96,7 @@ public class loginController  {
                     if (!fxmlFile.isEmpty()) {
                         try {
                             Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
-                            stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+                            stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
                             scene = new Scene(root);
                             stage.setScene(scene);
                             stage.show();
@@ -149,6 +152,17 @@ public class loginController  {
     @FXML
     public void initialize() {
         instance = this;
+        EventHandler<KeyEvent> enterKeyHandler = event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    loginButtonAction(new ActionEvent());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        usernameTextField.setOnKeyPressed(enterKeyHandler);
+        passwordPasswordField.setOnKeyPressed(enterKeyHandler);
     }
 }
 
