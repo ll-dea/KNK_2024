@@ -36,6 +36,18 @@ import java.util.ResourceBundle;
 
 public class profHomeController implements Initializable {
 
+    private Parent root;
+    private Stage stage;
+    private Scene scene;
+
+
+    @FXML
+    private Button closeButton;
+    public void cancelButtonOnAction(ActionEvent e) {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
+
     @FXML
     private TextField idLenda;
     @FXML
@@ -47,6 +59,13 @@ public class profHomeController implements Initializable {
 
     private Sesioni sesioni;
 
+    public void signoutButtonAction(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/login.fxml"));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         sesioni = new Sesioni();

@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CommonController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.commonController">
     <children>
         <Button fx:id="languageButton" text="Change Language" onAction="#languageButtonAction" layoutX="10" layoutY="10" />
     </children>

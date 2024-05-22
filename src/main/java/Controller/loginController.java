@@ -31,7 +31,7 @@ import java.util.ResourceBundle;
 
 
 
-public class loginController {
+public class loginController  {
 
     private Parent root;
     private Stage stage;
@@ -46,7 +46,7 @@ public class loginController {
     @FXML
     private Label loginMessageLabel;
 
-    public void cancelButtonOnAction(ActionEvent e) {
+    public void cancelButtonOnAction(ActionEvent e){
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
@@ -64,7 +64,7 @@ public class loginController {
 
     public void goToSignupButtonAction(ActionEvent e) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/Signup.fxml"));
-        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -96,7 +96,7 @@ public class loginController {
                     if (!fxmlFile.isEmpty()) {
                         try {
                             Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
-                            stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+                            stage = (Stage)((Node)e.getSource()).getScene().getWindow();
                             scene = new Scene(root);
                             stage.setScene(scene);
                             stage.show();
