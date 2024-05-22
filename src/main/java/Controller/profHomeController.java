@@ -56,6 +56,8 @@ public class profHomeController implements Initializable {
     private TextField oraKonsulltimeve;
     @FXML
     private TextField sallaKonsulltiemve;
+    @FXML
+    private Button signoutButton;
 
     private Sesioni sesioni;
 

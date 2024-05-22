@@ -1,58 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.profHomeController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.loginController">
     <children>
-        <AnchorPane prefHeight="82.0" prefWidth="700.0" style="-fx-background-color: #861c15;">
+        <AnchorPane prefHeight="500.0" prefWidth="345.0" style="-fx-background-color: #861c15;">
             <children>
-                <Text fill="#f2f3f8" layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SMK">
-                    <font>
-                        <Font size="39.0" />
-                    </font>
-                    <effect>
-                        <DropShadow />
-                    </effect>
-                </Text>
-                <Button fx:id="signoutButton" layoutX="597.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutButtonAction" style="-fx-background-color: #f2f3f8;" text="Signout" textFill="#861c15de" AnchorPane.rightAnchor="45.4" AnchorPane.topAnchor="14.0" />
-                <Button fx:id="closeButton" layoutX="597.0" layoutY="14.0" minWidth="25.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="30.0" prefWidth="25.0" text="X" textFill="#861c15" AnchorPane.rightAnchor="14.8" AnchorPane.topAnchor="14.0" />
-            </children>
-        </AnchorPane>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="99.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
 
-        <Label layoutX="15.0" layoutY="100.0" text="Index i Lendes: " AnchorPane.leftAnchor="15.0" />
-        <Label layoutX="15.0" layoutY="139.0" text="Data:" AnchorPane.leftAnchor="15.0" />
-        <DatePicker fx:id="idDataKonsulltimeve" layoutX="114.0" layoutY="135.0" prefHeight="26.0" prefWidth="151.0" />
-        <TextField fx:id="idLenda" layoutX="114.0" layoutY="96.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" />
-        <Label layoutX="18.0" layoutY="181.0" text="Ora:" AnchorPane.leftAnchor="15.0" />
-        <TextField fx:id="oraKonsulltimeve" layoutX="114.0" layoutY="177.0" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" />
-        <TextField fx:id="sallaKonsulltiemve" layoutX="115.0" layoutY="225.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" />
-        <Label layoutX="17.0" layoutY="230.0" text="Salla: " AnchorPane.leftAnchor="15.0" />
-        <Label layoutX="399.0" layoutY="139.0" text="Konsulltimet mbahen ne dite pune" />
-        <Label layoutX="462.0" layoutY="96.0" prefHeight="26.0" prefWidth="114.0" text="Rregullat:" />
-        <Label layoutX="399.0" layoutY="186.0" prefHeight="26.0" prefWidth="204.0" text="Konsulltimet zgjasin 90 minuta" />
-        <Line endX="137.4000244140625" endY="-7.62939453125E-6" layoutX="485.0" layoutY="96.0" startX="-100.0" stroke="#861c15" style="-fx-stroke-width: 2px;" />
-        <Line endX="-111.41421508789062" endY="90.20001220703125" layoutX="495.0" layoutY="157.0" startX="-111.41421508789062" startY="-59.585792541503906" stroke="#861c15" style="-fx-stroke-width: 2px;" />
-        <Line endX="137.4000244140625" endY="-7.62939453125E-6" layoutX="485.0" layoutY="248.0" startX="-100.0" stroke="#861c15" style="-fx-stroke-width: 2px;" />
-        <Line endX="-111.41421508789062" endY="90.20001220703125" layoutX="735.0" layoutY="156.0" startX="-111.41421508789062" startY="-59.585792541503906" stroke="#861c15" style="-fx-stroke-width: 2px;" />
-        <Label layoutX="399.0" layoutY="164.0" text="Konsulltimet mbahen ne orar pune" />
-        <TableView layoutX="1.0" layoutY="270.0" prefHeight="231.0" prefWidth="694.0">
-            <columns>
-                <TableColumn fx:id="IndexColumn" prefWidth="140.0" text="Index" />
-                <TableColumn fx:id="LendaColumn" prefWidth="140.0" text="Lenda" />
-                <TableColumn fx:id="DataLabel" prefWidth="140.0" text="Data" />
-                <TableColumn fx:id="OraColumn" prefWidth="140.0" text="Ora" />
-                <TableColumn fx:id="sallaColumn" prefWidth="140.0" text="Salla" />
-            </columns>
-        </TableView>
-    </children>
-</AnchorPane>
+                </ImageView>
+
+                <Text fill="#f2f3f8" layoutX="114.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SMK">
+    <font>
+        <Font size="60.0" />
+    </font>
+    <effect>
+        <DropShadow />
+    </effect>
+</Text>
+<Text fill="#f2f3f8" layoutX="50.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistemi për Menaxhimin e Konsulltimeve">
+<font>
+    <Font size="14.0" />
+</font>
+<effect>
+    <DropShadow />
+</effect>
+</Text>
+<Line endX="189.00003051757812" layoutX="111.0" layoutY="309.0" startX="-62.99999237060547" stroke="#f2f3f8" strokeWidth="2.0" />
+        </children>
+        </AnchorPane>
+<AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #f2f3f8;">
+<children>
+
+<Button fx:id="loginButton" layoutX="153.0" layoutY="286.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="35.0" prefWidth="69.0" style="-fx-background-color: #861c15;" text="Login" textFill="#f2f3f8">
+    <font>
+        <Font size="13.0" />
+    </font>
+</Button>
+<Button fx:id="closeButton" blendMode="DARKEN" layoutX="316.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="X" textFill="#861c15" />
+<Label fx:id="loginMessageLabel" layoutX="43.0" layoutY="139.0" prefHeight="19.0" prefWidth="270.0" textAlignment="CENTER" textFill="#e94545">
+<font>
+    <Font size="13.0" />
+</font>
+
+</Label>
+<PasswordField fx:id="passwordPasswordField" layoutX="113.0" layoutY="212.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" />
+<TextField fx:id="usernameTextField" layoutX="113.0" layoutY="165.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" />
+<Text fill="#861c15" layoutX="115.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login">
+<font>
+    <Font size="27.0" />
+</font>
+</Text>
+<Button fx:id="goToSignupButton" layoutX="96.0" layoutY="341.0" mnemonicParsing="false" onAction="#goToSignupButtonAction" style="-fx-background-color: transparent;" text="Don't have an account? Signup!" textFill="#007bff" />
+<Button layoutX="24.0" layoutY="14.0" mnemonicParsing="false" text="EN | SQ" textFill="#861c15" />
+        </children>
+        </AnchorPane>
+        </children>
+<opaqueInsets>
+<Insets />
+</opaqueInsets>
+        </HBox>
