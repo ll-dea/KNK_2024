@@ -3,6 +3,7 @@ package Controller;
 import Main.Main;
 import database.DatabaseUtil;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -123,6 +126,21 @@ public class SignupController {
             e.printStackTrace();
             return null;
         }
+    }
+    public void initialize() {
+
+        EventHandler<KeyEvent> enterKeyHandler = event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                signupButtonAction(new ActionEvent());
+            }
+        };
+
+        // Shtimi i EventHandler për fushat e tekstit
+        firstNameField.setOnKeyPressed(enterKeyHandler);
+        secondNameField.setOnKeyPressed(enterKeyHandler);
+        signupEmailField.setOnKeyPressed(enterKeyHandler);
+        signupPasswordField.setOnKeyPressed(enterKeyHandler);
+        repeatSignupPasswordField.setOnKeyPressed(enterKeyHandler);
     }
 
 
