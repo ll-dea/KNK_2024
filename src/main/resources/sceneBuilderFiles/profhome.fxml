@@ -54,5 +54,6 @@
             <TableColumn fx:id="sallaColumn" prefWidth="140.0" text="Salla" />
         </columns>
       </TableView>
+      <Button layoutX="303.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#shtoOrar" text="Posto" />
    </children>
 </AnchorPane>
