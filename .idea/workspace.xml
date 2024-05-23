@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f851600-c191-43f3-9942-567de10b97ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/profPasswordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/profPolicyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/profProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/profSatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profPassword.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profPolicy.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profProfile.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profSatistics.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/NotificationsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/SuggestionFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Suggestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/Notifications.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/SuggestionForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/firstyearsubjects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/firstyearsubjects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/secondyearsubjects.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/thirdyearsubjects.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/users" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/users" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/home.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profhome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profhome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +58,7 @@
   "keyToString": {
     "Application.DatabaseUtil.executor": "Run",
     "Application.HelloApplication.executor": "Run",
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -84,6 +83,7 @@
       <recent name="C:\Users\Admin\OneDrive\Desktop\KNK_2024\src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Model" />
       <recent name="org.example.knk_2024" />
       <recent name="Controller" />
       <recent name="Main" />

@@ -143,6 +143,18 @@ public class profHomeController implements Initializable {
             e.printStackTrace(); // Handle the exception properly
         }
     }
+    public void viewNotifications() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sceneBuilderFiles/Notifications.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Notifications");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }
