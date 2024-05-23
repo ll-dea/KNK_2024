@@ -34,3 +34,7 @@ UPDATE `knk2024`.`users` SET `email` = 'blerta.lutolli@student.uni-pr.edu' WHERE
 UPDATE `knk2024`.`users` SET `email` = 'alfred.palokaj@student.uni-pr.edu' WHERE (`id` = '6');
 UPDATE `knk2024`.`users` SET `email` = 'dion.bogaj@student.uni-pr.edu' WHERE (`id` = '7');
 UPDATE `knk2024`.`users` SET `email` = 'blend.arifaj@uni-pr.edu' WHERE (`id` = '8');
+
+new column for users
+ALTER TABLE `knk2024`.`users`
+ADD COLUMN `terms` VARCHAR(45) NULL AFTER `password`;

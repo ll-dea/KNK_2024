@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f851600-c191-43f3-9942-567de10b97ce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/profPasswordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/profPolicyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/profProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/profSatisticsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profPassword.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profPolicy.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profProfile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profSatistics.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/firstyearsubjects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/firstyearsubjects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/secondyearsubjects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/thirdyearsubjects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/users" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/users" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profhome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profhome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

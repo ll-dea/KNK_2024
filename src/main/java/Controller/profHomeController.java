@@ -108,6 +108,41 @@ public class profHomeController implements Initializable {
         alert.showAndWait();
     }
 
+    @FXML
+    private MenuItem profileMenuItem;
+    @FXML
+    private MenuItem passwordMenuItem;
+    @FXML
+    private MenuItem termsMenuItem;
+    @FXML
+    private MenuItem satisticsMenuItem;
+
+    @FXML
+    public void initialize() {
+        // Set up event handlers for menu items
+        profileMenuItem.setOnAction(event -> openNewWindow("/sceneBuilderFiles/profProfile.fxml"));
+        passwordMenuItem.setOnAction(event -> openNewWindow("/sceneBuilderFiles/profPassword.fxml"));
+        termsMenuItem.setOnAction(event -> openNewWindow("/sceneBuilderFiles/profPolicy.fxml"));
+        satisticsMenuItem.setOnAction(event -> openNewWindow("/sceneBuilderFiles/profSatistics.fxml"));
+
+    }
+
+    private void openNewWindow(String fxmlPath) {
+        try {
+            // Load the FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent root = loader.load();
+
+            // Create a new stage for the new window
+            Stage newStage = new Stage();
+            newStage.setScene(new Scene(root));
+
+            // Show the new window
+            newStage.show();
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle the exception properly
+        }
+    }
 
 
 }
