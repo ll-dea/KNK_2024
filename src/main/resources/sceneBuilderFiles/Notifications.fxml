@@ -9,14 +9,19 @@
     <children>
         <TableView fx:id="notificationsTable" layoutX="14.0" layoutY="14.0" prefHeight="472.0" prefWidth="672.0">
             <columns>
-                <TableColumn fx:id="dateColumn" prefWidth="336.0" style="-fx-background-color: #f2f3f8;" text="Suggested Date">
+                <TableColumn fx:id="dateColumn" prefWidth="224.0" style="-fx-background-color: #f2f3f8;" text="Suggested Date">
                     <cellValueFactory>
                         <PropertyValueFactory property="suggestedDate" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn fx:id="timeColumn" prefWidth="336.0" style="-fx-background-color: #f2f3f8;" text="Suggested Time">
+                <TableColumn fx:id="timeColumn" prefWidth="224.0" style="-fx-background-color: #f2f3f8;" text="Suggested Time">
                     <cellValueFactory>
                         <PropertyValueFactory property="suggestedTime" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="lendaColumn" prefWidth="224.0" style="-fx-background-color: #f2f3f8;" text="Lenda">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lenda" />
                     </cellValueFactory>
                 </TableColumn>
             </columns>

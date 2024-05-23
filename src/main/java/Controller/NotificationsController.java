@@ -1,4 +1,4 @@
-package Controller;//package Controller;
+package Controller;
 
 import Model.Suggestion;
 import javafx.fxml.FXML;
@@ -23,12 +23,14 @@ public class NotificationsController {
     @FXML
     private TableColumn<Suggestion, String> timeColumn;
 
-
+    @FXML
+    private TableColumn<Suggestion, String> lendaColumn; // New column
 
     @FXML
     public void initialize() {
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("suggestedDate"));
         timeColumn.setCellValueFactory(new PropertyValueFactory<>("suggestedTime"));
+        lendaColumn.setCellValueFactory(new PropertyValueFactory<>("lenda")); // New column setup
 
         loadNotifications();
     }
@@ -46,8 +48,9 @@ public class NotificationsController {
             while (resultSet.next()) {
                 String suggestedDate = resultSet.getString("suggested_date");
                 String suggestedTime = resultSet.getString("suggested_time");
+                String lenda = resultSet.getString("lenda"); // New field
 
-                suggestionsList.add(new Suggestion(suggestedDate, suggestedTime));
+                suggestionsList.add(new Suggestion(suggestedDate, suggestedTime, lenda));
             }
 
             notificationsTable.setItems(suggestionsList);
@@ -56,4 +59,3 @@ public class NotificationsController {
         }
     }
 }
-

@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f851600-c191-43f3-9942-567de10b97ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/NotificationsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/SuggestionFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Suggestion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/Notifications.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/SuggestionForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/suggestions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/NotificationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/NotificationsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SuggestionFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SuggestionFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/profHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Suggestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Suggestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/Notifications.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/Notifications.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/SuggestionForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/SuggestionForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profhome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profhome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +53,7 @@
   "keyToString": {
     "Application.DatabaseUtil.executor": "Run",
     "Application.HelloApplication.executor": "Run",
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -88,6 +83,13 @@
       <recent name="Controller" />
       <recent name="Main" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

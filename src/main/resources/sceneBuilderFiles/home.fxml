@@ -27,7 +27,7 @@
               </menus>
             </MenuBar>
             <Button fx:id="signoutButton" layoutX="600.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutButtonAction" text="Signout" />
-            <Button fx:id="goToSuggestions" layoutX="419.0" layoutY="14.0" mnemonicParsing="false" onAction="#suggestionButtonAction" text="Suggestions" />
+            <Button fx:id="goToSuggestions" layoutX="419.0" layoutY="14.0" mnemonicParsing="false" onAction="#openSuggestionForm" text="Suggestions" />
             </children>
         </AnchorPane>
         <TableView fx:id="table_lendet" layoutY="134.4" prefHeight="367.0" prefWidth="700.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
