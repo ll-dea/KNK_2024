@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f851600-c191-43f3-9942-567de10b97ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/policyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/userPasswordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userPassword.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userPolicy.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userProfile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/homeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/policyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/policyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/userPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/userPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/userProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/userProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userPassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userPassword.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userPolicy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userPolicy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userProfile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,5 +105,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

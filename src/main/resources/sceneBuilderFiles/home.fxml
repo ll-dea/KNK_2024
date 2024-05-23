@@ -2,6 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -12,7 +15,18 @@
         <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="700.0" style="-fx-background-color: #861c15;">
             <children>
                 <Button fx:id="closeButton" layoutX="662.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" style="-fx-background-color: #f3f2f8;" text="X" textFill="#861c15" />
-                <Button fx:id="signoutButton" layoutX="597.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutButtonAction" style="-fx-background-color: #f2f3f8;" text="Signout" textFill="#861c15" />
+            <MenuBar layoutX="519.0" layoutY="14.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Account">
+                  <items>
+                    <MenuItem fx:id="profileMenuItem" mnemonicParsing="false" onAction="#initialize" text="Profile" />
+                        <MenuItem fx:id="passwordMenuItem" mnemonicParsing="false" onAction="#initialize" text="Change Password" />
+                        <MenuItem fx:id="termsMenuItem" mnemonicParsing="false" onAction="#initialize" text="Terms and Conditions" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button fx:id="signoutButton" layoutX="600.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutButtonAction" text="Signout" />
             </children>
         </AnchorPane>
         <TableView layoutY="134.4" prefHeight="367.0" prefWidth="700.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
