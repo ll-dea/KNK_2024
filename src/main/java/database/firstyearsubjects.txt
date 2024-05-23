@@ -19,3 +19,52 @@ INSERT INTO knk2024.firstyearsubjects (LendaID, Emri_i_lendes, Emri_i_profesorit
 (11, 'Qarqe digjitale', NULL, '2024-05-03');
 
 SELECT * FROM knk2024.firstyearsubjects;
+
+
+------------------------------------------------------------------------------------------
+New database updates:
+
+ALTER TABLE `knk2024`.`firstyearsubjects`
+ADD COLUMN `Ora` VARCHAR(45) NULL AFTER `Data`,
+ADD COLUMN `Salla` VARCHAR(45) NULL AFTER `Ora`,
+CHANGE COLUMN `LendaID` `Index` INT(11) NOT NULL ,
+CHANGE COLUMN `Emri_i_lendes` `Lenda` VARCHAR(255) NULL DEFAULT NULL ,
+CHANGE COLUMN `Emri_i_profesorit` `Prof` VARCHAR(255) NULL DEFAULT NULL ,
+CHANGE COLUMN `Data_e_konsultimeve` `Data` DATE NULL DEFAULT NULL ;
+
+
+INSERT INTO knk2024.firstyearsubjects (`Index`, `Lenda`, `Prof`, `Data`,`Ora`,`Salla`) VALUES
+(12, 'Matematike Diskrete me Probabilitet', NULL, '2024-05-25',NULL,NULL),
+(13, 'Elektronike', NULL, '2024-05-26',NULL,NULL),
+(14, 'Bazat e te dhenave', NULL, '2024-05-27',NULL,NULL),
+(15, 'Ueb I', NULL, '2024-05-30',NULL,NULL),
+(16, 'Arkitektura e Kompjutereve', NULL, '2024-05-28',NULL,NULL),
+(17, 'Programim i Orientuar ne Objekte', NULL, '2024-06-01',NULL,NULL),
+(18, 'Ueb II', NULL, '2024-05-25',NULL,NULL),
+(19, 'Komunikimi Njeri-Kompjuter', NULL, '2024-06-02',NULL,NULL),
+(20, 'Siguria e te Dhenave', NULL, '2024-05-27',NULL,NULL),
+(21, 'Sisteme Operative', NULL, '2024-05-27',NULL,NULL),
+(22, 'Buxheti dhe analiza e shpenzimeve ', NULL, '2024-05-27',NULL,NULL),
+(23, 'Inxhinieri Softuerike', NULL, '2024-05-03',NULL,NULL);
+
+
+INSERT INTO knk2024.firstyearsubjects (`Index`, `Lenda`, `Prof`, `Data`,`Ora`,`Salla`) VALUES
+(24, 'Ndermarresi dhe Inovacion', NULL, '2024-05-25',NULL,NULL),
+(25, 'Mikroprocesoret dhe Mikrokontrolleret', NULL, '2024-05-26',NULL,NULL),
+(26, 'Modeli i te dhenave dhe gjuhet e pyetesoreve ', NULL, '2024-05-27',NULL,NULL),
+(27, 'Rrjetet kompjuterike', NULL, '2024-05-30',NULL,NULL),
+(28, 'Internet Security', NULL, '2024-05-28',NULL,NULL),
+(29, 'Dizajni dhe analiza e algoritmeve', NULL, '2024-06-01',NULL,NULL),
+(30, 'Programimi i pajisjeve mobile', NULL, '2024-05-25',NULL,NULL),
+(31, 'Testimi i softuerit', NULL, '2024-06-02',NULL,NULL),
+(32, 'Data Mining', NULL, '2024-05-27',NULL,NULL),
+(33, 'Praktika e rrjeteve kompjuterike', NULL, '2024-05-27',NULL,NULL),
+(34, 'Sistemet e shperndara', NULL, '2024-05-27',NULL,NULL),
+(35, 'Information Retrevial', NULL, '2024-05-27',NULL,NULL),
+(36, 'Praktika Profesionale', NULL, '2024-05-27',NULL,NULL),
+(37, 'Bazat e Inteligjences Artificiale', NULL, '2024-05-03',NULL,NULL);
+
+ALTER TABLE `knk2024`.`firstyearsubjects`
+RENAME TO  `knk2024`.`lendet` ;
+
+

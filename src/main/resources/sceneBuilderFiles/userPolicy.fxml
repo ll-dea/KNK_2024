@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.policyController">
+    <children>
+        <AnchorPane prefHeight="500.0" prefWidth="247.0" style="-fx-background-color: #861c15;">
+            <children>
+                <VBox layoutX="18.0" layoutY="261.0" prefHeight="169.0" prefWidth="192.0" AnchorPane.bottomAnchor="69.33333333333334" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.333333333333343" AnchorPane.topAnchor="261.0">
+                    <children>
+                        <Button fx:id="goToProfileButton" mnemonicParsing="false" onAction="#goToProfileButtonAction" prefHeight="51.0" prefWidth="193.0" style="-fx-background-color: transparent;" text=" Profile" textAlignment="CENTER" textFill="#f2f3f8">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                        <Button fx:id="goToPasswordButton" mnemonicParsing="false" onAction="#goToPasswordeButtonAction" prefHeight="51.0" prefWidth="193.0" style="-fx-background-color: transparent;" text="  Password" textFill="#f2f3f8">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                        <Button fx:id="goToTermsButton" mnemonicParsing="false" onAction="#goToPolicyButtonAction" prefHeight="51.0" prefWidth="193.0" style="-fx-background-color: #840905;" text="   Policy and terms" textFill="#f2f3f8">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                    </children>
+                </VBox>
+                <Circle fill="#f2f3f8" layoutX="114.0" layoutY="77.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" />
+                <Label fx:id="emri_mbiemriLabel" layoutX="60.0" layoutY="169.0" text="Emri Mbiemri" textFill="#f2f3f8">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="500.0" prefWidth="491.0" style="-fx-background-color: #f2f3f8;">
+            <children>
+                <Label layoutX="181.0" layoutY="60.0" />
+            <Label layoutX="121.0" layoutY="14.0" text="Terms and Conditons">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <TextArea layoutY="60.0" prefHeight="392.0" prefWidth="473.0" style="-fx-background-color: transparent;" text="1. Introduction&#10;Welcome to SMK. By accessing or using our consultation management system, &#10;you agree to comply with and be bound by the following terms and conditions of &#10;use. Please read these terms and conditions carefully before using our service.&#10;2. Use of the Service&#10;You agree to use the service only for lawful purposes and in a manner that does &#10;not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the &#10;service. Prohibited behavior includes harassing or causing distress or inconvenience &#10;to any other user, transmitting obscene or offensive content, or disrupting the &#10;normal flow of dialogue within the service.&#10;3. User Accounts&#10;To access certain features of the service, you may be required to create an account. &#10;You agree to provide accurate, current, and complete information during the &#10;registration process and to update such information to keep it accurate, current, &#10;and complete. You are responsible for safeguarding your password and agree not &#10;to disclose your password to any third party.&#10;4. Privacy&#10;Your privacy is important to us. By using the service, you consent to the collection&#10; and use of your information as outlined in the Privacy Policy.&#10;5. Limitation of Liability&#10;To the maximum extent permitted by applicable law, SMK shall not be liable for&#10;any direct, indirect, incidental, special, consequential, or punitive damages, or any &#10;loss of profits or revenues, whether incurred directly or indirectly, or any loss of &#10;data, use, goodwill, or other intangible losses, resulting from &#10;(i) your use or inability to use the service; &#10;(ii) any unauthorized access to or use of our servers and/or any personal &#10;information stored therein; &#10;(iii) any interruption or cessation of transmission to or from the service.&#10;6. Changes to Terms and Conditions&#10;We reserve the right to modify these terms and conditions at any time. Any &#10;changes will be posted on this page, and the date of the latest revision will be &#10;indicated at the top. Your continued use of the service after any such changes &#10;constitutes your acceptance of the new terms and conditions.&#10;7. Governing Law&#10;These terms and conditions are governed by and construed in accordance with the &#10;laws of Kosova, and you irrevocably submit to the exclusive jurisdiction of the &#10;courts in that location.&#10;&#10;" />
+            <CheckBox fx:id="agreeTermsCheckBox" layoutX="25.0" layoutY="461.0" mnemonicParsing="false" text="Do you agree to these terms and conditions?" />
+            </children>
+        </AnchorPane>
+    </children>
+</HBox>

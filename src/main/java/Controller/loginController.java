@@ -62,6 +62,8 @@ public class loginController  {
     @FXML
     private Button goToSignupButton;
 
+
+
     public void goToSignupButtonAction(ActionEvent e) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/Signup.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -87,9 +89,9 @@ public class loginController  {
                     // Check the email domain
                     String email = usernameTextField.getText();
                     String fxmlFile = "";
-                    if (email.endsWith("@student.com")) {
+                    if (email.endsWith("@student.uni-pr.edu")) {
                         fxmlFile = "/sceneBuilderFiles/home.fxml";
-                    } else if (email.endsWith("@professor.com")) {
+                    } else if (email.endsWith("@uni-pr.edu")) {
                         fxmlFile = "/sceneBuilderFiles/profhome.fxml";
                     }
 
