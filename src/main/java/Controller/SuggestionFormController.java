@@ -1,11 +1,16 @@
 package Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import database.DatabaseUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javafx.scene.control.Alert;
+import javafx.stage.Stage;
+
 
 public class SuggestionFormController {
 
@@ -19,13 +24,20 @@ public class SuggestionFormController {
     private TextField suggestedTimeField;
 
     @FXML
-    private TextField lendaField; // New field
+    private TextField lendaField;
+    @FXML
+    private Button closeButton;
+
+    public void cancelButtonOnAction(ActionEvent e) {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
 
     public void sendSuggestion() {
         String professorEmail = professorEmailField.getText();
         String suggestedDate = suggestedDateField.getText();
         String suggestedTime = suggestedTimeField.getText();
-        String lenda = lendaField.getText(); // New field
+        String lenda = lendaField.getText();
 
         DatabaseUtil dbUtil = new DatabaseUtil();
         Connection conn = dbUtil.getconnection();
@@ -38,6 +50,14 @@ public class SuggestionFormController {
             preparedStatement.setString(3, suggestedTime);
             preparedStatement.setString(4, lenda); // New field
             preparedStatement.executeUpdate();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Suggestion Sent");
+            alert.setHeaderText(null);
+            alert.setContentText("Your suggestion has been sent successfully!");
+            alert.showAndWait();
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

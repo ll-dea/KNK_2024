@@ -14,7 +14,6 @@ module org.example.knk_2024 {
     opens Main to javafx.fxml;
     exports Model;
     opens Model to javafx.fxml;
-
 }
 
 

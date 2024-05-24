@@ -39,7 +39,7 @@
                                 <Font size="18.0" />
                             </font>
                         </Button>
-                  <Button fx:id="goToTermsButton1" mnemonicParsing="false" onAction="#goToPolicyButtonAction" prefHeight="51.0" prefWidth="193.0" style="-fx-background-color: #840905;" text="Satistics" textFill="#f2f3f8">
+                  <Button fx:id="goToPolicyButton" mnemonicParsing="false" onAction="#goToPolicyButtonAction" prefHeight="51.0" prefWidth="193.0" style="-fx-background-color: #840905;" text="Satistics" textFill="#f2f3f8">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -70,6 +70,7 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </BarChart>
+            <Button fx:id="closeButton" layoutX="436.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="X" textFill="#862c15" />
          </children>
         </AnchorPane>
     </children>

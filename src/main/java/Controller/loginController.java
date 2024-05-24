@@ -1,12 +1,10 @@
 package Controller;
 
-import Main.Main;
 import database.DatabaseUtil;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,21 +15,18 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import Model.User;
+import Service.Session;
 
 import java.io.IOException;
-import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Base64;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
-
-
-public class loginController  {
+public class loginController {
 
     private Parent root;
     private Stage stage;
@@ -62,8 +57,6 @@ public class loginController  {
     @FXML
     private Button goToSignupButton;
 
-
-
     public void goToSignupButtonAction(ActionEvent e) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/Signup.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -76,7 +69,7 @@ public class loginController  {
         DatabaseUtil connectNow = new DatabaseUtil();
         Connection connectdb = connectNow.getconnection();
 
-        String verifyLogin = "SELECT password FROM users WHERE email = '" + usernameTextField.getText() + "'";
+        String verifyLogin = "SELECT id, first_name, last_name, email, password, gjinia, terms FROM users WHERE email = '" + usernameTextField.getText() + "'";
         try {
             Statement statement = connectdb.createStatement();
             ResultSet queryResult = statement.executeQuery(verifyLogin);
@@ -86,14 +79,19 @@ public class loginController  {
                 String enteredPasswordHash = hashPassword(passwordPasswordField.getText());
 
                 if (retrievedHashedPassword.equals(enteredPasswordHash)) {
-                    // Check the email domain
-                    String email = usernameTextField.getText();
-                    String fxmlFile = "";
-                    if (email.endsWith("@student.uni-pr.edu")) {
-                        fxmlFile = "/sceneBuilderFiles/home.fxml";
-                    } else if (email.endsWith("@uni-pr.edu")) {
-                        fxmlFile = "/sceneBuilderFiles/profhome.fxml";
-                    }
+                    int id = queryResult.getInt("id");
+                    String firstName = queryResult.getString("first_name");
+                    String lastName = queryResult.getString("last_name");
+                    String email = queryResult.getString("email");
+                    String password = queryResult.getString("password");
+
+                    String gjinia = queryResult.getString("gjinia");
+                    String terms = queryResult.getString("terms");
+
+                    User user = new User(id, firstName, lastName, email,password,  gjinia, terms);
+                    Session.login(user);  // Set the current user in the session
+
+                    String fxmlFile = email.endsWith("@student.uni-pr.edu") ? "/sceneBuilderFiles/home.fxml" : "/sceneBuilderFiles/profhome.fxml";
 
                     if (!fxmlFile.isEmpty()) {
                         try {
@@ -131,23 +129,6 @@ public class loginController  {
             return null;
         }
     }
-//
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        Locale locale = Locale.getDefault();
-//        ResourceBundle bundle = ResourceBundle.getBundle(
-//                "translations", locale
-//        );
-//        this.goToSignupButton.setText(bundle.getString("lblCreateNewAccount"));
-//    }
-
-    public static void updateTexts(ResourceBundle bundle) {
-        if (instance != null) {
-            instance.closeButton.setText(bundle.getString("button.close"));
-            instance.loginMessageLabel.setText(bundle.getString("label.loginMessage"));
-            instance.goToSignupButton.setText(bundle.getString("button.goToSignup"));
-        }
-    }
 
     private static loginController instance;
 
@@ -167,4 +148,3 @@ public class loginController  {
         passwordPasswordField.setOnKeyPressed(enterKeyHandler);
     }
 }
-

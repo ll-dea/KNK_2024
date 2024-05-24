@@ -41,5 +41,7 @@
             </Button>
          </children>
       </AnchorPane>
+      <Button fx:id="closeButton" layoutX="662.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="X" textFill="#861c15" />
+      <Button fx:id="goHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToHomeButtonAction" text="Home" textFill="#861c15" />
    </children>
 </AnchorPane>

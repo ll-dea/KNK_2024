@@ -142,6 +142,13 @@ public class SignupController {
         signupPasswordField.setOnKeyPressed(enterKeyHandler);
         repeatSignupPasswordField.setOnKeyPressed(enterKeyHandler);
     }
+    public void goToHomeButtonAction(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/home.fxml"));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
 }
