@@ -15,26 +15,26 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="44.0" layoutY="107.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" text="Data e Kons.">
+            <Label layoutX="47.0" layoutY="165.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" text="Data e Kons.">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="47.0" layoutY="164.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" text="Ora e Kons.">
+            <Label layoutX="47.0" layoutY="220.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" text="Ora e Kons.">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="47.0" layoutY="220.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" text="Lenda">
+            <Label layoutX="47.0" layoutY="102.0" style="-fx-background-color: transparent; -fx-border-color: #861c15; -fx-border-width: 0px 0px 2px 0px;" text="Lenda">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
             <TextField fx:id="professorEmailField" layoutX="183.0" layoutY="51.0" />
-            <TextField fx:id="suggestedDateField" layoutX="183.0" layoutY="106.0" />
-            <TextField fx:id="suggestedTimeField" layoutX="183.0" layoutY="163.0" />
-            <TextField fx:id="lendaField" layoutX="183.0" layoutY="219.0" />
-            <Button layoutX="174.0" layoutY="270.0" mnemonicParsing="false" onAction="#sendSuggestion" style="-fx-background-color: #861c15;" text="Dergo" textFill="#f2f3f8">
+            <TextField fx:id="suggestedDateField" layoutX="183.0" layoutY="164.0" />
+            <TextField fx:id="suggestedTimeField" layoutX="183.0" layoutY="219.0" />
+            <TextField fx:id="lendaField" layoutX="183.0" layoutY="101.0" />
+            <Button layoutX="169.0" layoutY="254.0" mnemonicParsing="false" onAction="#sendSuggestion" style="-fx-background-color: #861c15;" text="Dergo" textFill="#f2f3f8">
                <font>
                   <Font size="15.0" />
                </font>

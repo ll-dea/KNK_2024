@@ -38,3 +38,4 @@ UPDATE `knk2024`.`users` SET `email` = 'blend.arifaj@uni-pr.edu' WHERE (`id` = '
 new column for users
 ALTER TABLE `knk2024`.`users`
 ADD COLUMN `terms` VARCHAR(45) NULL AFTER `password`;
+

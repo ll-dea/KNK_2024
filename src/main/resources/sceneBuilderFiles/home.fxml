@@ -15,34 +15,32 @@
         <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="700.0" style="-fx-background-color: #861c15;">
             <children>
                 <Button fx:id="closeButton" layoutX="662.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" style="-fx-background-color: #f3f2f8;" text="X" textFill="#861c15" />
-            <MenuBar layoutX="519.0" layoutY="14.0">
-              <menus>
-                <Menu mnemonicParsing="false" text="Account">
-                  <items>
-                    <MenuItem fx:id="profileMenuItem" mnemonicParsing="false" onAction="#initialize" text="Profile" />
-                        <MenuItem fx:id="passwordMenuItem" mnemonicParsing="false" onAction="#initialize" text="Change Password" />
-                        <MenuItem fx:id="termsMenuItem" mnemonicParsing="false" onAction="#initialize" text="Terms and Conditions" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <Button fx:id="signoutButton" layoutX="600.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutButtonAction" text="Signout" />
-            <Button fx:id="goToSuggestions" layoutX="419.0" layoutY="14.0" mnemonicParsing="false" onAction="#openSuggestionForm" text="Suggestions" />
+                <MenuBar layoutX="519.0" layoutY="14.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Account">
+                            <items>
+                                <MenuItem fx:id="profileMenuItem" mnemonicParsing="false" text="Profile" />
+                                <MenuItem fx:id="passwordMenuItem" mnemonicParsing="false" text="Change Password" />
+                                <MenuItem fx:id="termsMenuItem" mnemonicParsing="false" text="Terms and Conditions" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Button fx:id="signoutButton" layoutX="600.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutButtonAction" text="Signout" />
+                <Button fx:id="goToSuggestions" layoutX="419.0" layoutY="14.0" mnemonicParsing="false" onAction="#openSuggestionForm" text="Suggestions" />
             </children>
         </AnchorPane>
-        <TableView fx:id="table_lendet" layoutY="134.4" prefHeight="367.0" prefWidth="700.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
+        <TableView fx:id="Lendet" layoutY="134.4" prefHeight="367.0" prefWidth="700.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
             <columns>
-                <TableColumn prefWidth="116.6" text="Index" />
-                <TableColumn prefWidth="116.7" text="Lënda" />
-                <TableColumn prefWidth="116.6" text="Prof." />
-                <TableColumn prefWidth="116.6" text="Data" />
-                <TableColumn prefWidth="116.6" text="Ora" />
-                <TableColumn prefWidth="116.6" text="Salla" />
+                <TableColumn fx:id="Index" prefWidth="100.0" text="Index" />
+                <TableColumn fx:id="Lenda" prefWidth="180.0" text="Lënda" />
+                <TableColumn fx:id="Prof" prefWidth="165.0" text="Prof." />
+                <TableColumn fx:id="Data" prefWidth="85.0" text="Data" />
+                <TableColumn fx:id="Ora" prefWidth="85.0" text="Ora" />
+                <TableColumn fx:id="Salla" prefWidth="85.0" text="Salla" />
             </columns>
         </TableView>
-        <TextField layoutX="58.0" layoutY="97.0" promptText="Lenda" />
-        <DatePicker layoutX="225.0" layoutY="95.0" promptText="Datat" />
-        <Button layoutX="598.0" layoutY="98.0" mnemonicParsing="false" text="Filtro" />
-        <TextField layoutX="419.0" layoutY="98.0" promptText="Profi" />
+        <TextField fx:id="lendaTextField" layoutX="180.0" layoutY="94.0" promptText="Lenda" />
+            <DatePicker fx:id="dataDatePicker" layoutX="350.0" layoutY="94.0" promptText="Data" />
     </children>
 </AnchorPane>

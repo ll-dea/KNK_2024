@@ -67,4 +67,7 @@ INSERT INTO knk2024.firstyearsubjects (`Index`, `Lenda`, `Prof`, `Data`,`Ora`,`S
 ALTER TABLE `knk2024`.`firstyearsubjects`
 RENAME TO  `knk2024`.`lendet` ;
 
+ALTER TABLE `knk2024`.`lendet`
+CHANGE COLUMN `Index` `Id` INT NOT NULL ;
+
 
