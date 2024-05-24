@@ -9,7 +9,9 @@ public class OrariKonsultimeve {
     private String ora;
     private String salla;
 
-    public OrariKonsultimeve(String lenda, LocalDate data, String ora, String salla) {
+
+
+    public OrariKonsultimeve( String lenda, LocalDate data, String ora, String salla) {
         this.lenda = lenda;
         this.data = data;
         this.ora = ora;
@@ -47,5 +49,6 @@ public class OrariKonsultimeve {
     public void setSalla(String salla) {
         this.salla = salla;
     }
+
 }
 

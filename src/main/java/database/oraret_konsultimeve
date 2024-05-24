@@ -1,0 +1,7 @@
+CREATE TABLE oraret_konsultimeve (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lenda VARCHAR(255) NOT NULL,
+    data DATE NOT NULL,
+    ora VARCHAR(10) NOT NULL,
+    salla VARCHAR(50) NOT NULL
+);
