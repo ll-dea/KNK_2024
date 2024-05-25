@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7f851600-c191-43f3-9942-567de10b97ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/policyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/policyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/profPolicyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/profPolicyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profPolicy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/profPolicy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userPolicy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sceneBuilderFiles/userPolicy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/translations/content_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/content_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/translations/content_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/content_sq.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +60,9 @@
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;22&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/Admin/OneDrive/Desktop/KNK_2024/src/main/java/org/example/knk_2024&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Test/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Scene Builder/SceneBuilder.lnk&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/OneDrive/Desktop/javafx-sdk-22.0.1/lib/javafx.web.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }

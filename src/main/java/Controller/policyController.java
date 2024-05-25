@@ -2,17 +2,25 @@ package Controller;
 
 import Model.User;
 import Service.Session;
+import database.DatabaseUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import static database.DatabaseUtil.getconnection;
 
 public class policyController {
 
@@ -21,6 +29,8 @@ public class policyController {
 
     @FXML
     private Button closeButton;
+    @FXML
+    private CheckBox agreeTermsCheckBox;
 
     public policyController() {
         this.stage = new Stage();
@@ -82,5 +92,62 @@ public class policyController {
         } else {
             emri_mbiemriLabel.setText("Unknown");
         }
+    }
+    @FXML
+    public void agreeTermsCheckBoxAction(ActionEvent event) {
+        System.out.println("Funksion agree TermsCheckBoxAction eshte thirr!");
+        User user = Session.getCurrentUser();
+        if (user != null) {
+
+
+            boolean agreed = agreeTermsCheckBox.isSelected();
+
+            updateUserAgreementStatus(agreed);
+            hasUserAgreedToTerms(String.valueOf(agreed));
+        }
+    }
+
+    private void updateUserAgreementStatus(boolean agreed) {
+        System.out.println("Funksion agree update eshte thirr!");
+
+        User user = Session.getCurrentUser();
+        String email = user.getEmail();
+        String sql = "UPDATE users SET terms = ? WHERE email = ?";
+
+        try (Connection conn = getconnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setBoolean(1, agreed);
+            stmt.setString(2, email);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+    // Method to check if the user has already agreed to the terms
+    public static boolean hasUserAgreedToTerms(String username) {
+        System.out.println("Po shikohet nese ka agree!");
+
+        User user = Session.getCurrentUser();
+        String email = user.getEmail();
+        DatabaseUtil connectnow = new DatabaseUtil();
+        Connection connectdb = getconnection();
+        String sql = "SELECT terms FROM users WHERE email = ?";
+
+
+        try (Connection conn = getconnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getBoolean("terms");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false; // Default to false if an error occurs
     }
 }
