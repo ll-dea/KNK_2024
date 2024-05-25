@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,14 +20,14 @@ import Model.User;
 import Service.Session;
 
 import java.io.IOException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Base64;
+import java.util.ResourceBundle;
 
-public class loginController {
+public class loginController  {
 
     private Parent root;
     private Stage stage;
@@ -40,6 +41,8 @@ public class loginController {
     private Button closeButton;
     @FXML
     private Label loginMessageLabel;
+    @FXML
+    private Button loginButton;
 
     public void cancelButtonOnAction(ActionEvent e){
         Stage stage = (Stage) closeButton.getScene().getWindow();
@@ -49,6 +52,7 @@ public class loginController {
     public void loginButtonAction(ActionEvent e) throws IOException {
         if (!usernameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
             validatelogin(e);
+            loginButton.requestFocus();
         } else {
             loginMessageLabel.setText("You need to enter your username and password!");
         }
@@ -66,58 +70,63 @@ public class loginController {
     }
 
     public void validatelogin(ActionEvent e) {
+        Object source = e.getSource();
+        if (source instanceof Node) {
+            Node nodeSource = (Node) source;
+            stage = (Stage) nodeSource.getScene().getWindow();
+        }
         DatabaseUtil connectNow = new DatabaseUtil();
-        Connection connectdb = connectNow.getconnection();
+        try (Connection connectdb = connectNow.getconnection()) {
+            String email = usernameTextField.getText();
+            String verifyLogin = "SELECT id, first_name, last_name, email, password, gjinia, terms FROM users WHERE email = ?";
 
-        String verifyLogin = "SELECT id, first_name, last_name, email, password, gjinia, terms FROM users WHERE email = '" + usernameTextField.getText() + "'";
-        try {
-            Statement statement = connectdb.createStatement();
-            ResultSet queryResult = statement.executeQuery(verifyLogin);
+            try (PreparedStatement statement = connectdb.prepareStatement(verifyLogin)) {
+                statement.setString(1, email);
+                ResultSet queryResult = statement.executeQuery();
 
-            if (queryResult.next()) {
-                String retrievedHashedPassword = queryResult.getString("password");
-                String enteredPasswordHash = hashPassword(passwordPasswordField.getText());
+                if (queryResult.next()) {
+                    String retrievedHashedPassword = queryResult.getString("password");
+                    String enteredPasswordHash = hashPassword(passwordPasswordField.getText());
 
-                if (retrievedHashedPassword.equals(enteredPasswordHash)) {
-                    int id = queryResult.getInt("id");
-                    String firstName = queryResult.getString("first_name");
-                    String lastName = queryResult.getString("last_name");
-                    String email = queryResult.getString("email");
-                    String password = queryResult.getString("password");
+                    if (retrievedHashedPassword.equals(enteredPasswordHash)) {
+                        int id = queryResult.getInt("id");
+                        String firstName = queryResult.getString("first_name");
+                        String lastName = queryResult.getString("last_name");
+                        String gjinia = queryResult.getString("gjinia");
+                        String terms = queryResult.getString("terms");
 
-                    String gjinia = queryResult.getString("gjinia");
-                    String terms = queryResult.getString("terms");
+                        User user = new User(id, firstName, lastName, email, retrievedHashedPassword, gjinia, terms);
+                        Session.login(user);
 
-                    User user = new User(id, firstName, lastName, email,password,  gjinia, terms);
-                    Session.login(user);  // Set the current user in the session
+                        String fxmlFile = email.endsWith("@student.uni-pr.edu") ? "/sceneBuilderFiles/home.fxml" : "/sceneBuilderFiles/profHome.fxml";
 
-                    String fxmlFile = email.endsWith("@student.uni-pr.edu") ? "/sceneBuilderFiles/home.fxml" : "/sceneBuilderFiles/profhome.fxml";
-
-                    if (!fxmlFile.isEmpty()) {
-                        try {
-                            Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
-                            stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-                            scene = new Scene(root);
-                            stage.setScene(scene);
-                            stage.show();
-                        } catch (IOException ioException) {
-                            ioException.printStackTrace();
-                            loginMessageLabel.setText("Cannot log in. Try again later!");
+                        if (!fxmlFile.isEmpty()) {
+                            try {
+                                Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
+                                Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+                                Scene scene = new Scene(root);
+                                stage.setScene(scene);
+                                stage.show();
+                            } catch (IOException ioException) {
+                                ioException.printStackTrace();
+                                loginMessageLabel.setText("Cannot load the home page. Please try again later!");
+                            }
+                        } else {
+                            loginMessageLabel.setText("Invalid email domain!");
                         }
                     } else {
-                        loginMessageLabel.setText("Invalid email domain!");
+                        loginMessageLabel.setText("Incorrect password. Please try again!");
                     }
                 } else {
-                    loginMessageLabel.setText("Invalid login. Please try again!");
+                    loginMessageLabel.setText("User with this email does not exist!");
                 }
-            } else {
-                loginMessageLabel.setText("Invalid login. Please try again!");
             }
-        } catch (Exception ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
-            loginMessageLabel.setText("An error occurred. Please try again later.");
+            loginMessageLabel.setText("An error occurred while logging in. Please try again later.");
         }
     }
+
 
     private String hashPassword(String password) {
         try {
@@ -132,10 +141,10 @@ public class loginController {
 
     private static loginController instance;
 
-    @FXML
+
     public void initialize() {
-        instance = this;
-        EventHandler<KeyEvent> enterKeyHandler = event -> {
+        // Add event listener for Enter key press on usernameTextField
+        usernameTextField.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
                     loginButtonAction(new ActionEvent());
@@ -143,8 +152,22 @@ public class loginController {
                     e.printStackTrace();
                 }
             }
-        };
-        usernameTextField.setOnKeyPressed(enterKeyHandler);
-        passwordPasswordField.setOnKeyPressed(enterKeyHandler);
+        });
+
+        // Add event listener for Enter key press on passwordPasswordField
+        passwordPasswordField.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    loginButtonAction(new ActionEvent());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
     }
 }
+
+
+
