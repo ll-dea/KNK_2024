@@ -63,8 +63,10 @@
 </font>
 </Text>
 <Button fx:id="goToSignupButton" layoutX="96.0" layoutY="341.0" mnemonicParsing="false" onAction="#goToSignupButtonAction" style="-fx-background-color: transparent;" text="Don't have an account? Signup!" textFill="#007bff" />
-<Button layoutX="24.0" layoutY="14.0" mnemonicParsing="false" text="EN | SQ" textFill="#861c15" />
-        </children>
+    <Button fx:id="languageButton" layoutX="24.0" layoutY="14.0" mnemonicParsing="false" text="EN | SQ" textFill="#861c15" onAction="#changeLanguage" />
+
+
+</children>
         </AnchorPane>
         </children>
 <opaqueInsets>

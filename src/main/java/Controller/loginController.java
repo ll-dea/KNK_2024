@@ -25,13 +25,15 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.Base64;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class loginController  {
+public class loginController {
 
     private Parent root;
     private Stage stage;
     private Scene scene;
+    private ResourceBundle resourceBundle;
 
     @FXML
     private TextField usernameTextField;
@@ -43,8 +45,10 @@ public class loginController  {
     private Label loginMessageLabel;
     @FXML
     private Button loginButton;
+    @FXML
+    private Button languageButton;
 
-    public void cancelButtonOnAction(ActionEvent e){
+    public void cancelButtonOnAction(ActionEvent e) {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
@@ -63,7 +67,7 @@ public class loginController  {
 
     public void goToSignupButtonAction(ActionEvent e) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sceneBuilderFiles/Signup.fxml"));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -143,7 +147,9 @@ public class loginController  {
 
 
     public void initialize() {
-        // Add event listener for Enter key press on usernameTextField
+        resourceBundle = ResourceBundle.getBundle("content_en", Locale.getDefault());
+
+
         usernameTextField.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
@@ -154,7 +160,7 @@ public class loginController  {
             }
         });
 
-        // Add event listener for Enter key press on passwordPasswordField
+
         passwordPasswordField.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
@@ -164,10 +170,33 @@ public class loginController  {
                 }
             }
         });
+    }
+
+    public void changeLanguage(ActionEvent event) {
+        Locale currentLocale = resourceBundle.getLocale();
+        if (currentLocale.getLanguage().equals("en")) {
+            resourceBundle = ResourceBundle.getBundle("content_sq", Locale.getDefault());
+        } else {
+            resourceBundle = ResourceBundle.getBundle("content_en", Locale.getDefault());
+        }
+
+        loginMessageLabel.setText(resourceBundle.getString("invalidEmailDomainMessage"));
+        usernameTextField.setPromptText(resourceBundle.getString("textEmriApp"));
+        passwordPasswordField.setPromptText(resourceBundle.getString("loginPasswordPasswordField"));
+        loginButton.setText(resourceBundle.getString("loginButton"));
+        closeButton.setText(resourceBundle.getString("closeButton"));
+        languageButton.setText(resourceBundle.getString("languageButton"));
+        loginMessageLabel.setText(resourceBundle.getString("invalidEmailDomainMessage"));
+        loginMessageLabel.setText(resourceBundle.getString("incorrectPasswordMessage"));
+        loginMessageLabel.setText(resourceBundle.getString("userDoesNotExistMessage"));
+        loginMessageLabel.setText(resourceBundle.getString("loginErrorMessage"));
+        goToSignupButton.setText(resourceBundle.getString("goToSignupButton"));
 
 
     }
 }
+
+
 
 
 
