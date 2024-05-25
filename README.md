@@ -35,7 +35,7 @@ Ky është një sistem për menaxhimin e konsultimeve në Fakultetin e Inxhinier
 1. Klononi këtë repository:
     ```sh
     git clone https://github.com/ll-dea/KNK_2024.git
-    cd sistemi-konsulltimeve
+    cd KNK_2024
     ```
 
 2. Hapni projektin në Intellij IDEA.
